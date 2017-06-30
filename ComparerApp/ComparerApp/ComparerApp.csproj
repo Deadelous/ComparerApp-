@@ -51,8 +51,12 @@
     <Compile Include="Comparerapp.Designer.cs">
       <DependentUpon>Comparerapp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Concert.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortFolder\ArtistSort.cs" />
+    <Compile Include="SortFolder\DateSort.cs" />
+    <Compile Include="SortFolder\PriceSort.cs" />
     <EmbeddedResource Include="Comparerapp.resx">
       <DependentUpon>Comparerapp.cs</DependentUpon>
     </EmbeddedResource>
