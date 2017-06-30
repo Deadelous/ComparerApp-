@@ -25,7 +25,7 @@ namespace ComparerApp.Model
 
         public override string ToString()
         {
-            return $"{Artist} + {Date} + {Price}";
+            return $"{Artist} + {Date.ToShortDateString()} + {Price.ToString("c")}";
         }
     }
 }
