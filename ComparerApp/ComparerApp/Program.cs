@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComparerApp.Controller;
 
 namespace ComparerApp
 {
@@ -16,7 +17,7 @@ namespace ComparerApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Concertapp());
+            Application.Run(new MainController().view);
         }
     }
 }

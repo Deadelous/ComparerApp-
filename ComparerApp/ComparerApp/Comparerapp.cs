@@ -7,42 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComparerApp.SortFolder;
 using ComparerApp.Model;
 
 namespace ComparerApp
 {
-    public partial class Concertapp : Form
+    public partial class Mainview : Form
     {
-        private List<Concert> concerten;
-        public Concertapp()
+        public EventHandler Addlistofconcerts;
+        public EventHandler Sortdate;
+        public EventHandler Sortprice;
+        public EventHandler Sortartist;
+
+        public ListBox Concertlist => ArtistLBox;
+        public Mainview()
         {
             InitializeComponent();
+        }  
 
-            addinListbox();
+ 
+        private void NewListofConcerts_Click(object sender, EventArgs e)
+        {
+            Addlistofconcerts?.Invoke(this, new EventArgs());
         }
 
-        public List<Concert> addConcerts()
+        private void SortArtistBtn_Click(object sender, EventArgs e)
         {
-            concerten = new List<Concert>();
-
-            concerten.Add(new Concert("Sting", new DateTime(2014, 12, 3), 75));
-            concerten.Add(new Concert("U2", new DateTime(2015, 1, 14), 88));
-            concerten.Add(new Concert("Coldplay", new DateTime(2015, 7, 10), 110));
-            concerten.Add(new Concert("Afrojack", new DateTime(2014, 11, 17), 65));
-            concerten.Add(new Concert("The Killers", new DateTime(2015, 3, 25), 58));
-            concerten.Add(new Concert("Pitbull", new DateTime(2015, 2, 24), 96.5));
-            concerten.Add(new Concert("Beyonce", new DateTime(2015, 8, 1), 75));
-            concerten.Add(new Concert("Pink", new DateTime(2015, 11, 3), 82));
-            concerten.Add(new Concert("Adele", new DateTime(2015, 9, 25), 92.5));
-
-            return concerten;
-
+            Sortartist?.Invoke(this, new EventArgs());
         }
 
-        public void addinListbox()
+        private void SortPriceBtn_Click(object sender, EventArgs e)
         {
-            ArtistLBox.DataSource = addConcerts();
+            Sortprice?.Invoke(this, new EventArgs());
+        }
 
+        private void SortDateBtn_Click(object sender, EventArgs e)
+        {
+            Sortdate?.Invoke(this, new EventArgs());
         }
     }
 }
