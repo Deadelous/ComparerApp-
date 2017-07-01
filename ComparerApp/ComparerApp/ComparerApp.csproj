@@ -45,12 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comparerapp.cs">
+    <None Include="Concertapp">
       <SubType>Form</SubType>
-    </Compile>
+    </None>
     <Compile Include="Comparerapp.Designer.cs">
-      <DependentUpon>Comparerapp.cs</DependentUpon>
+      <DependentUpon>Concertapp</DependentUpon>
     </Compile>
+    <Compile Include="Controller\MainController.cs" />
     <Compile Include="Model\Concert.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,7 +59,7 @@
     <Compile Include="SortFolder\DateSort.cs" />
     <Compile Include="SortFolder\PriceSort.cs" />
     <EmbeddedResource Include="Comparerapp.resx">
-      <DependentUpon>Comparerapp.cs</DependentUpon>
+      <DependentUpon>Concertapp</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
