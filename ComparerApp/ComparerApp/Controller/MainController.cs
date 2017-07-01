@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using ComparerApp.Model;
 using ComparerApp.SortFolder;
-using ComparerApp;
 
 namespace ComparerApp.Controller
 {
-    public class MainController
-    {
+    class MainController
+    {  
         public Mainview view { get; }
 
         private List<Concert> concerten;
@@ -49,7 +48,7 @@ namespace ComparerApp.Controller
             foreach (Concert r in addConcerts())
             {
                 view.Concertlist.Items.Add(r);
-                
+
             }
 
         }
@@ -112,3 +111,4 @@ namespace ComparerApp.Controller
         }
     }
 }
+
