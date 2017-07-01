@@ -33,20 +33,20 @@
             this.PriceSortBtn = new System.Windows.Forms.Button();
             this.ArtistLBox = new System.Windows.Forms.ListBox();
             this.Order = new System.Windows.Forms.GroupBox();
-            this.Artiestlbl = new System.Windows.Forms.Label();
-            this.Datumlbl = new System.Windows.Forms.Label();
-            this.Pricelbl = new System.Windows.Forms.Label();
-            this.Totalticketlbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.manylbl = new System.Windows.Forms.Label();
-            this.totalpricelbl = new System.Windows.Forms.Label();
-            this.artistnameLbl = new System.Windows.Forms.Label();
-            this.Datenamelbl = new System.Windows.Forms.Label();
-            this.Pricenamelbl = new System.Windows.Forms.Label();
-            this.Pricetotallbl = new System.Windows.Forms.Label();
-            this.Countlbl = new System.Windows.Forms.Label();
             this.Ticketslbl = new System.Windows.Forms.Label();
+            this.Countlbl = new System.Windows.Forms.Label();
+            this.Pricetotallbl = new System.Windows.Forms.Label();
+            this.Pricenamelbl = new System.Windows.Forms.Label();
+            this.Datenamelbl = new System.Windows.Forms.Label();
+            this.artistnameLbl = new System.Windows.Forms.Label();
+            this.totalpricelbl = new System.Windows.Forms.Label();
+            this.manylbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Totalticketlbl = new System.Windows.Forms.Label();
+            this.Pricelbl = new System.Windows.Forms.Label();
+            this.Datumlbl = new System.Windows.Forms.Label();
+            this.Artiestlbl = new System.Windows.Forms.Label();
             this.Order.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.ArtistsortBtn.TabIndex = 0;
             this.ArtistsortBtn.Text = "Sort on Artist";
             this.ArtistsortBtn.UseVisualStyleBackColor = true;
+            this.ArtistsortBtn.Click += new System.EventHandler(this.ArtistsortBtn_Click);
             // 
             // DateSortBtn
             // 
@@ -67,6 +68,7 @@
             this.DateSortBtn.TabIndex = 1;
             this.DateSortBtn.Text = "Sort on Date";
             this.DateSortBtn.UseVisualStyleBackColor = true;
+            this.DateSortBtn.Click += new System.EventHandler(this.DateSortBtn_Click);
             // 
             // PriceSortBtn
             // 
@@ -76,6 +78,7 @@
             this.PriceSortBtn.TabIndex = 2;
             this.PriceSortBtn.Text = "Sort on Price";
             this.PriceSortBtn.UseVisualStyleBackColor = true;
+            this.PriceSortBtn.Click += new System.EventHandler(this.PriceSortBtn_Click);
             // 
             // ArtistLBox
             // 
@@ -108,111 +111,14 @@
             this.Order.TabStop = false;
             this.Order.Text = "Bestellen";
             // 
-            // Artiestlbl
+            // Ticketslbl
             // 
-            this.Artiestlbl.AutoSize = true;
-            this.Artiestlbl.Location = new System.Drawing.Point(17, 37);
-            this.Artiestlbl.Name = "Artiestlbl";
-            this.Artiestlbl.Size = new System.Drawing.Size(30, 13);
-            this.Artiestlbl.TabIndex = 0;
-            this.Artiestlbl.Text = "Artist";
-            // 
-            // Datumlbl
-            // 
-            this.Datumlbl.AutoSize = true;
-            this.Datumlbl.Location = new System.Drawing.Point(20, 73);
-            this.Datumlbl.Name = "Datumlbl";
-            this.Datumlbl.Size = new System.Drawing.Size(30, 13);
-            this.Datumlbl.TabIndex = 1;
-            this.Datumlbl.Text = "Date";
-            // 
-            // Pricelbl
-            // 
-            this.Pricelbl.AutoSize = true;
-            this.Pricelbl.Location = new System.Drawing.Point(20, 106);
-            this.Pricelbl.Name = "Pricelbl";
-            this.Pricelbl.Size = new System.Drawing.Size(31, 13);
-            this.Pricelbl.TabIndex = 2;
-            this.Pricelbl.Text = "Price";
-            // 
-            // Totalticketlbl
-            // 
-            this.Totalticketlbl.AutoSize = true;
-            this.Totalticketlbl.Location = new System.Drawing.Point(20, 154);
-            this.Totalticketlbl.Name = "Totalticketlbl";
-            this.Totalticketlbl.Size = new System.Drawing.Size(68, 13);
-            this.Totalticketlbl.TabIndex = 3;
-            this.Totalticketlbl.Text = "Total tickets:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(119, 154);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(119, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // manylbl
-            // 
-            this.manylbl.AutoSize = true;
-            this.manylbl.Location = new System.Drawing.Point(75, 289);
-            this.manylbl.Name = "manylbl";
-            this.manylbl.Size = new System.Drawing.Size(53, 13);
-            this.manylbl.TabIndex = 6;
-            this.manylbl.Text = "There are";
-            // 
-            // totalpricelbl
-            // 
-            this.totalpricelbl.AutoSize = true;
-            this.totalpricelbl.Location = new System.Drawing.Point(75, 328);
-            this.totalpricelbl.Name = "totalpricelbl";
-            this.totalpricelbl.Size = new System.Drawing.Size(61, 13);
-            this.totalpricelbl.TabIndex = 7;
-            this.totalpricelbl.Text = "Total Price:";
-            // 
-            // artistnameLbl
-            // 
-            this.artistnameLbl.AutoSize = true;
-            this.artistnameLbl.Location = new System.Drawing.Point(119, 37);
-            this.artistnameLbl.Name = "artistnameLbl";
-            this.artistnameLbl.Size = new System.Drawing.Size(10, 13);
-            this.artistnameLbl.TabIndex = 8;
-            this.artistnameLbl.Text = "-";
-            // 
-            // Datenamelbl
-            // 
-            this.Datenamelbl.AutoSize = true;
-            this.Datenamelbl.Location = new System.Drawing.Point(119, 73);
-            this.Datenamelbl.Name = "Datenamelbl";
-            this.Datenamelbl.Size = new System.Drawing.Size(10, 13);
-            this.Datenamelbl.TabIndex = 9;
-            this.Datenamelbl.Text = "-";
-            // 
-            // Pricenamelbl
-            // 
-            this.Pricenamelbl.AutoSize = true;
-            this.Pricenamelbl.Location = new System.Drawing.Point(119, 106);
-            this.Pricenamelbl.Name = "Pricenamelbl";
-            this.Pricenamelbl.Size = new System.Drawing.Size(10, 13);
-            this.Pricenamelbl.TabIndex = 10;
-            this.Pricenamelbl.Text = "-";
-            // 
-            // Pricetotallbl
-            // 
-            this.Pricetotallbl.AutoSize = true;
-            this.Pricetotallbl.Location = new System.Drawing.Point(157, 328);
-            this.Pricetotallbl.Name = "Pricetotallbl";
-            this.Pricetotallbl.Size = new System.Drawing.Size(13, 13);
-            this.Pricetotallbl.TabIndex = 11;
-            this.Pricetotallbl.Text = "0";
+            this.Ticketslbl.AutoSize = true;
+            this.Ticketslbl.Location = new System.Drawing.Point(204, 289);
+            this.Ticketslbl.Name = "Ticketslbl";
+            this.Ticketslbl.Size = new System.Drawing.Size(38, 13);
+            this.Ticketslbl.TabIndex = 13;
+            this.Ticketslbl.Text = "tickets";
             // 
             // Countlbl
             // 
@@ -223,14 +129,111 @@
             this.Countlbl.TabIndex = 12;
             this.Countlbl.Text = ".";
             // 
-            // Ticketslbl
+            // Pricetotallbl
             // 
-            this.Ticketslbl.AutoSize = true;
-            this.Ticketslbl.Location = new System.Drawing.Point(204, 289);
-            this.Ticketslbl.Name = "Ticketslbl";
-            this.Ticketslbl.Size = new System.Drawing.Size(38, 13);
-            this.Ticketslbl.TabIndex = 13;
-            this.Ticketslbl.Text = "tickets";
+            this.Pricetotallbl.AutoSize = true;
+            this.Pricetotallbl.Location = new System.Drawing.Point(157, 328);
+            this.Pricetotallbl.Name = "Pricetotallbl";
+            this.Pricetotallbl.Size = new System.Drawing.Size(13, 13);
+            this.Pricetotallbl.TabIndex = 11;
+            this.Pricetotallbl.Text = "0";
+            // 
+            // Pricenamelbl
+            // 
+            this.Pricenamelbl.AutoSize = true;
+            this.Pricenamelbl.Location = new System.Drawing.Point(119, 106);
+            this.Pricenamelbl.Name = "Pricenamelbl";
+            this.Pricenamelbl.Size = new System.Drawing.Size(10, 13);
+            this.Pricenamelbl.TabIndex = 10;
+            this.Pricenamelbl.Text = "-";
+            // 
+            // Datenamelbl
+            // 
+            this.Datenamelbl.AutoSize = true;
+            this.Datenamelbl.Location = new System.Drawing.Point(119, 73);
+            this.Datenamelbl.Name = "Datenamelbl";
+            this.Datenamelbl.Size = new System.Drawing.Size(10, 13);
+            this.Datenamelbl.TabIndex = 9;
+            this.Datenamelbl.Text = "-";
+            // 
+            // artistnameLbl
+            // 
+            this.artistnameLbl.AutoSize = true;
+            this.artistnameLbl.Location = new System.Drawing.Point(119, 37);
+            this.artistnameLbl.Name = "artistnameLbl";
+            this.artistnameLbl.Size = new System.Drawing.Size(10, 13);
+            this.artistnameLbl.TabIndex = 8;
+            this.artistnameLbl.Text = "-";
+            // 
+            // totalpricelbl
+            // 
+            this.totalpricelbl.AutoSize = true;
+            this.totalpricelbl.Location = new System.Drawing.Point(75, 328);
+            this.totalpricelbl.Name = "totalpricelbl";
+            this.totalpricelbl.Size = new System.Drawing.Size(61, 13);
+            this.totalpricelbl.TabIndex = 7;
+            this.totalpricelbl.Text = "Total Price:";
+            // 
+            // manylbl
+            // 
+            this.manylbl.AutoSize = true;
+            this.manylbl.Location = new System.Drawing.Point(75, 289);
+            this.manylbl.Name = "manylbl";
+            this.manylbl.Size = new System.Drawing.Size(53, 13);
+            this.manylbl.TabIndex = 6;
+            this.manylbl.Text = "There are";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(119, 230);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(119, 154);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // Totalticketlbl
+            // 
+            this.Totalticketlbl.AutoSize = true;
+            this.Totalticketlbl.Location = new System.Drawing.Point(20, 154);
+            this.Totalticketlbl.Name = "Totalticketlbl";
+            this.Totalticketlbl.Size = new System.Drawing.Size(68, 13);
+            this.Totalticketlbl.TabIndex = 3;
+            this.Totalticketlbl.Text = "Total tickets:";
+            // 
+            // Pricelbl
+            // 
+            this.Pricelbl.AutoSize = true;
+            this.Pricelbl.Location = new System.Drawing.Point(20, 106);
+            this.Pricelbl.Name = "Pricelbl";
+            this.Pricelbl.Size = new System.Drawing.Size(31, 13);
+            this.Pricelbl.TabIndex = 2;
+            this.Pricelbl.Text = "Price";
+            // 
+            // Datumlbl
+            // 
+            this.Datumlbl.AutoSize = true;
+            this.Datumlbl.Location = new System.Drawing.Point(20, 73);
+            this.Datumlbl.Name = "Datumlbl";
+            this.Datumlbl.Size = new System.Drawing.Size(30, 13);
+            this.Datumlbl.TabIndex = 1;
+            this.Datumlbl.Text = "Date";
+            // 
+            // Artiestlbl
+            // 
+            this.Artiestlbl.AutoSize = true;
+            this.Artiestlbl.Location = new System.Drawing.Point(17, 37);
+            this.Artiestlbl.Name = "Artiestlbl";
+            this.Artiestlbl.Size = new System.Drawing.Size(30, 13);
+            this.Artiestlbl.TabIndex = 0;
+            this.Artiestlbl.Text = "Artist";
             // 
             // Concertapp
             // 

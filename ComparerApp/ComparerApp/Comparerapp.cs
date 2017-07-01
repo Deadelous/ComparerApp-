@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComparerApp.SortFolder;
 using ComparerApp.Model;
 
 namespace ComparerApp
@@ -41,8 +42,83 @@ namespace ComparerApp
 
         public void addinListbox()
         {
-            ArtistLBox.DataSource = addConcerts();
+            foreach (Concert r in addConcerts())
+            {
+                ArtistLBox.Items.Add(r);
+            }
 
+        }
+
+        public void SortonDate()
+        {
+            List<Concert> temp = new List<Concert>();
+            foreach (Concert r in ArtistLBox.Items)
+            {
+                temp.Add(r);
+            }
+
+            temp.Sort(new DateSort());
+
+            ArtistLBox.Items.Clear();
+            foreach (Concert r in temp)
+            {
+
+                ArtistLBox.Items.Add(r);
+             
+            }
+        }
+
+        public void SortonArtist()
+        {
+            List<Concert> temp = new List<Concert>();
+            foreach (Concert r in ArtistLBox.Items)
+            {
+                temp.Add(r);
+            }
+
+            temp.Sort(new ArtistSort());
+
+            ArtistLBox.Items.Clear();
+            foreach (Concert r in temp)
+            {
+
+                ArtistLBox.Items.Add(r);
+
+            }
+        }
+
+        public void SortonPrice()
+        {
+            List<Concert> temp = new List<Concert>();
+            foreach (Concert r in ArtistLBox.Items)
+            {
+                temp.Add(r);
+            }
+
+            temp.Sort(new PriceSort());
+
+            ArtistLBox.Items.Clear();
+            foreach (Concert r in temp)
+            {
+
+                ArtistLBox.Items.Add(r);
+
+            }
+        }
+
+        private void ArtistsortBtn_Click(object sender, EventArgs e)
+        {
+            SortonArtist();
+        }
+
+        private void DateSortBtn_Click(object sender, EventArgs e)
+        {
+            SortonDate();
+        }
+
+        private void PriceSortBtn_Click(object sender, EventArgs e)
+        {
+            SortonPrice();
         }
     }
 }
