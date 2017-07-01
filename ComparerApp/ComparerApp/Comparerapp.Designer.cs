@@ -58,6 +58,7 @@
             this.ArtistLBox.Name = "ArtistLBox";
             this.ArtistLBox.Size = new System.Drawing.Size(549, 355);
             this.ArtistLBox.TabIndex = 3;
+            this.ArtistLBox.SelectedIndexChanged += new System.EventHandler(this.ArtistLBox_SelectedIndexChanged);
             // 
             // Order
             // 

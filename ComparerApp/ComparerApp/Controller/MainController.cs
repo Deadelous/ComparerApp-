@@ -22,6 +22,7 @@ namespace ComparerApp.Controller
             view.Sortdate += (sender, e) => SortonDate();
             view.Sortprice += (sender, e) => SortonPrice();
             view.Addlistofconcerts += (sender, e) => addinListbox();
+            view.LabelsofListbox += (sender, e) => labelsListbox();
 
         }
 
@@ -108,6 +109,15 @@ namespace ComparerApp.Controller
                 view.Concertlist.Items.Add(r);
 
             }
+        }
+
+        public void labelsListbox()
+        {
+            Concert concert = (Concert)view.Concertlist.SelectedItem;
+            view.ArtistName.Text = concert.Artist;
+            view.DateConcert.Text = concert.Date.ToShortDateString();
+            view.PriceConcert.Text = concert.Price.ToString("c");
+
         }
     }
 }

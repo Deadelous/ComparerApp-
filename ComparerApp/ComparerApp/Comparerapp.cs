@@ -18,8 +18,14 @@ namespace ComparerApp
         public EventHandler Sortdate;
         public EventHandler Sortprice;
         public EventHandler Sortartist;
+        public EventHandler LabelsofListbox;
 
         public ListBox Concertlist => ArtistLBox;
+        public Label ArtistName => artistnameLbl;
+
+        public Label DateConcert => Datenamelbl;
+
+        public Label PriceConcert => Pricenamelbl;
         public Mainview()
         {
             InitializeComponent();
@@ -44,6 +50,11 @@ namespace ComparerApp
         private void SortDateBtn_Click(object sender, EventArgs e)
         {
             Sortdate?.Invoke(this, new EventArgs());
+        }
+
+        private void ArtistLBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LabelsofListbox?.Invoke(this, new EventArgs());
         }
     }
 }
