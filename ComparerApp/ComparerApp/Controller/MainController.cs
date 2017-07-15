@@ -23,6 +23,8 @@ namespace ComparerApp.Controller
             view.Sortprice += (sender, e) => SortonPrice();
             view.Addlistofconcerts += (sender, e) => addinListbox();
             view.LabelsofListbox += (sender, e) => labelsListbox();
+            view.PriceofTickets += (sender, e) => pricetickets();
+            view.CountTicket += (sender, e) => counttickets();
 
         }
 
@@ -118,6 +120,22 @@ namespace ComparerApp.Controller
             view.DateConcert.Text = concert.Date.ToShortDateString();
             view.PriceConcert.Text = concert.Price.ToString("c");
 
+        }
+
+        public void counttickets()
+        {
+            view.CountTickets.Text = view.TotalTickets.Value.ToString();
+        }
+
+        public void pricetickets()
+        {
+            Concert concert = (Concert)view.Concertlist.SelectedItem;
+
+            double result = concert.Price * Convert.ToDouble(view.TotalTickets.Value);
+
+            view.Pricetotal.Text = result.ToString("c");
+
+           
         }
     }
 }

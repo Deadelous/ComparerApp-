@@ -38,8 +38,7 @@
             this.artistnameLbl = new System.Windows.Forms.Label();
             this.totalpricelbl = new System.Windows.Forms.Label();
             this.manylbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Order_BTN = new System.Windows.Forms.Button();
             this.Totalticketlbl = new System.Windows.Forms.Label();
             this.Pricelbl = new System.Windows.Forms.Label();
             this.Datumlbl = new System.Windows.Forms.Label();
@@ -48,7 +47,9 @@
             this.SortArtistBtn = new System.Windows.Forms.Button();
             this.SortPriceBtn = new System.Windows.Forms.Button();
             this.SortDateBtn = new System.Windows.Forms.Button();
+            this.numberoftickets = new System.Windows.Forms.NumericUpDown();
             this.Order.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numberoftickets)).BeginInit();
             this.SuspendLayout();
             // 
             // ArtistLBox
@@ -62,6 +63,7 @@
             // 
             // Order
             // 
+            this.Order.Controls.Add(this.numberoftickets);
             this.Order.Controls.Add(this.Ticketslbl);
             this.Order.Controls.Add(this.Countlbl);
             this.Order.Controls.Add(this.Pricetotallbl);
@@ -70,8 +72,7 @@
             this.Order.Controls.Add(this.artistnameLbl);
             this.Order.Controls.Add(this.totalpricelbl);
             this.Order.Controls.Add(this.manylbl);
-            this.Order.Controls.Add(this.button1);
-            this.Order.Controls.Add(this.textBox1);
+            this.Order.Controls.Add(this.Order_BTN);
             this.Order.Controls.Add(this.Totalticketlbl);
             this.Order.Controls.Add(this.Pricelbl);
             this.Order.Controls.Add(this.Datumlbl);
@@ -155,21 +156,15 @@
             this.manylbl.TabIndex = 6;
             this.manylbl.Text = "There are";
             // 
-            // button1
+            // Order_BTN
             // 
-            this.button1.Location = new System.Drawing.Point(119, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(119, 154);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.Order_BTN.Location = new System.Drawing.Point(119, 230);
+            this.Order_BTN.Name = "Order_BTN";
+            this.Order_BTN.Size = new System.Drawing.Size(179, 23);
+            this.Order_BTN.TabIndex = 5;
+            this.Order_BTN.Text = "Order";
+            this.Order_BTN.UseVisualStyleBackColor = true;
+            this.Order_BTN.Click += new System.EventHandler(this.Order_BTN_Click);
             // 
             // Totalticketlbl
             // 
@@ -247,6 +242,13 @@
             this.SortDateBtn.UseVisualStyleBackColor = true;
             this.SortDateBtn.Click += new System.EventHandler(this.SortDateBtn_Click);
             // 
+            // numberoftickets
+            // 
+            this.numberoftickets.Location = new System.Drawing.Point(131, 154);
+            this.numberoftickets.Name = "numberoftickets";
+            this.numberoftickets.Size = new System.Drawing.Size(120, 20);
+            this.numberoftickets.TabIndex = 14;
+            // 
             // Mainview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,6 +264,7 @@
             this.Text = "Order ConcertTickets";
             this.Order.ResumeLayout(false);
             this.Order.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numberoftickets)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,8 +278,7 @@
         private System.Windows.Forms.Label artistnameLbl;
         private System.Windows.Forms.Label totalpricelbl;
         private System.Windows.Forms.Label manylbl;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Order_BTN;
         private System.Windows.Forms.Label Totalticketlbl;
         private System.Windows.Forms.Label Pricelbl;
         private System.Windows.Forms.Label Datumlbl;
@@ -287,6 +289,7 @@
         private System.Windows.Forms.Button SortArtistBtn;
         private System.Windows.Forms.Button SortPriceBtn;
         private System.Windows.Forms.Button SortDateBtn;
+        private System.Windows.Forms.NumericUpDown numberoftickets;
     }
 }
 

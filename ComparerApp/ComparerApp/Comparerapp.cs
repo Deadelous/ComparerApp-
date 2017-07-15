@@ -19,6 +19,9 @@ namespace ComparerApp
         public EventHandler Sortprice;
         public EventHandler Sortartist;
         public EventHandler LabelsofListbox;
+        public EventHandler CountTicket;
+        public EventHandler PriceofTickets;
+        
 
         public ListBox Concertlist => ArtistLBox;
         public Label ArtistName => artistnameLbl;
@@ -26,6 +29,12 @@ namespace ComparerApp
         public Label DateConcert => Datenamelbl;
 
         public Label PriceConcert => Pricenamelbl;
+
+        public Label Pricetotal => Pricetotallbl;
+
+        public Label CountTickets => Countlbl;
+
+        public NumericUpDown TotalTickets => numberoftickets;
         public Mainview()
         {
             InitializeComponent();
@@ -55,6 +64,12 @@ namespace ComparerApp
         private void ArtistLBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             LabelsofListbox?.Invoke(this, new EventArgs());
+        }
+
+        private void Order_BTN_Click(object sender, EventArgs e)
+        {
+            CountTicket?.Invoke(this, new EventArgs());
+            PriceofTickets?.Invoke(this, new EventArgs());
         }
     }
 }
