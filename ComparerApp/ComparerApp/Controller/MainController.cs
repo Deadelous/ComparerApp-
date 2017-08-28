@@ -48,6 +48,8 @@ namespace ComparerApp.Controller
 
         public void addinListbox()
         {
+            view.Concertlist.Items.Clear();
+
             foreach (Concert r in addConcerts())
             {
                 view.Concertlist.Items.Add(r);
