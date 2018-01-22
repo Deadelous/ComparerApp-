@@ -15,13 +15,13 @@ namespace ComparerApp.Model
             this.Date = date;
             this.Price = price;
         }
-        public string Artist { get; set; }
+        public string Artist { get;  }
 
-        public DateTime Date { get; set; }
+        public DateTime Date { get; }
 
-        public double Price { get; set; }
+        public double Price { get; }
 
-        public string Concertinfo { get; set; }
+        public string Concertinfo { get; }
 
         public override string ToString()
         {
